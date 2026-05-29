@@ -10,4 +10,4 @@ pycryptodome
 
 ```bash
 pip install pycryptodome
-python lab4_simetrico.py
+python lab4.py
