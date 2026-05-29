@@ -1,28 +1,61 @@
-cat > LAB4/README.md << 'EOF'
+# Laboratorio 4 - Cifrado Simétrico
 
-# Laboratorio 4 - Criptografía
-
-Este laboratorio implementa un programa en Python para cifrar y descifrar mensajes utilizando cifrado simétrico con los algoritmos DES, AES-256 y 3DES en modo CBC.
-
-El programa solicita desde la terminal:
-
-- Texto a cifrar.
-- Clave para cada algoritmo.
-- Vector de inicialización IV para cada algoritmo.
-
-Además, valida y ajusta los tamaños de clave e IV según los requisitos de cada algoritmo.
+Este proyecto corresponde al Laboratorio 4 de criptografía. El programa está desarrollado en Python y utiliza la librería `pycryptodome`.
 
 ## Requisitos
 
-- Python 3
-- pip
-- Entorno virtual de Python
-- pycryptodome
+Antes de ejecutar el programa, se debe tener instalado Python 3.
 
 ## Crear entorno virtual
 
-Desde la carpeta `LAB4`, ejecutar:
+Desde la carpeta del proyecto, crear un entorno virtual con:
 
 ```bash
 python3 -m venv venv
 ```
+
+Activar el entorno virtual:
+
+```bash
+source venv/bin/activate
+```
+
+En caso de estar en Windows, se activa con:
+
+```bash
+venv\Scripts\activate
+```
+
+## Instalar dependencias
+
+Con el entorno virtual activado, instalar la librería necesaria:
+
+```bash
+pip install pycryptodome
+```
+
+## Ejecución
+
+Con el entorno virtual activado, ejecutar el programa con:
+
+```bash
+python3 lab4.py
+```
+
+También puede ejecutarse con:
+
+```bash
+python lab4.py
+```
+
+dependiendo de la configuración de Python en el sistema.
+
+## Archivo principal
+
+```text
+lab4.py
+```
+
+## Autor
+
+Sebastián León
