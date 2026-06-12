@@ -1,0 +1,45 @@
+services:
+  c1:
+    build: ./C1
+    container_name: C1
+    tty: true
+    stdin_open: true
+    networks:
+      labnet:
+        ipv4_address: 172.30.0.11
+
+  c2:
+    build: ./C2
+    container_name: C2
+    tty: true
+    stdin_open: true
+    networks:
+      labnet:
+        ipv4_address: 172.30.0.12
+
+  c3:
+    build: ./C3
+    container_name: C3
+    tty: true
+    stdin_open: true
+    networks:
+      labnet:
+        ipv4_address: 172.30.0.13
+
+  c4s1:
+    build: ./C4S1
+    container_name: C4S1
+    tty: true
+    stdin_open: true
+    ports:
+      - "2222:22"
+    networks:
+      labnet:
+        ipv4_address: 172.30.0.22
+
+networks:
+  labnet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24
